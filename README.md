@@ -1,11 +1,3 @@
-## Eaglercraft-Server-Paper
-
-Universal Eaglercraft server (1.5, 1.8, 1.12) using Paper 1.12.2
-
-Use the `run.bat` file to run on Windows, or `run.sh` to run on macOS or Linux. The server uses port 25565 for both Vanilla and Eaglercraft players.
-
-Based on EaglercraftXServer, EaglercraftXRewind, ViaVersion, SkinsRestorer, and AuthMeReloaded.
-
-You can also download the EaglerMOTD plugin to animate your server's MOTD, and the EaglerWeb plugin to host a website from your server, both of which are available here [https://github.com/lax1dude/eaglerxserver/releases](https://github.com/lax1dude/eaglerxserver/releases)
-
-**Note:** If you would like to support versions of Eaglercraft 1.5 older than 22w34a (before singleplayer), add `-Deaglerxrewind.oldChunkFormat=true` to the JVM arguments in the run script. This will perform worse for both clients and the server, but will be compatible with every version of 1.5 going back to 2020.
+@echo off
+java -Xmx2G -Xms2G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dcom.mojang.eula.agree=true -jar paper-1.12.2.jar
+pause
