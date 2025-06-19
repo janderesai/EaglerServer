@@ -1,0 +1,5 @@
+ConfigVersion: 2
+MaxHomes: 3
+AutoUpdater:
+  Enabled: true
+  Mode: notify
